@@ -52,7 +52,7 @@ spec:
     stage('create & push docker-image') {
         steps {        
           container('kaniko') {
-              sh "/kaniko/executor --dockerfile `pwd`/Dockerfile --context `pwd` --destination $TARGET_REGISTRY/dind-buildx:0.2 --cleanup"
+              sh "/kaniko/executor --dockerfile `pwd`/Dockerfile --context `pwd` --destination $TARGET_REGISTRY/dind-buildx:0.3 --cleanup"
           }
         }
       }
